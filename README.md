@@ -31,7 +31,7 @@ export default defineApiConfig({
   adapter: "fetch",
   // set http headers here
   setHeaders: () => {
-    return {};
+    return { Authorization: "Bearer token" };
   },
   // the callback of the response
   beforeResponse: ({ status }) => {
