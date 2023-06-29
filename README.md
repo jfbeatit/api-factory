@@ -75,7 +75,7 @@ export function useApi<T = Array<Record<string, unknown>>>() {
   return apiFactory<{ code: number; msg: string; data: T>(import("./api/definition/index.ts"));
 }
 ```
-5. as you can see, you just need to define the `apiList` object in the api/definition/index.ts, and then use it like this:
+5. finally, just simply use it like this:
 
 ```ts
 import { useApi } from "/api";
