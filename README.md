@@ -80,6 +80,13 @@ export function useApi<T = Array<Record<string, unknown>>>() {
 ```ts
 import { useApi } from "/api";
 
+interface User {
+  id: number;
+  name: string;
+  age: number;
+  //...
+}
+
 async function uploadFile(e) {
   const file = e.target.files[0];
   const res = await useApi().common.upload({ file });
@@ -87,19 +94,19 @@ async function uploadFile(e) {
 }
 
 async function fetchUsers() {
-  const res = await useApi().user.query();
+  const res = await useApi<Array<User>>().user.query();
   console.info(res);
 }
 
 // or
 async function createUser() {
-  const res = await useApi().user.create({ name: "test1" });
+  const res = await useApi<User>().user.create({ name: "test1" });
   console.info(res);
 }
 
 // or
 async function updateUser() {
-  const res = await useApi().user.update({ id: 1, name: "test2" });
+  const res = await useApi<User>().user.update({ id: 1, name: "test2" });
   console.info(res);
 }
 
