@@ -1,6 +1,13 @@
 {
   "name": "@jfbeatit/api-factory",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "homepage": "https://github.com/jfbeatit/api-factory",
+  "keywords": ["http client", "fetch api", "uni request"],
+  "author": "jfbeatit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfbeatit/api-factory/issues"
+  },
   "type": "module",
   "files": [
     "dist",
@@ -25,5 +32,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/jfbeatit/api-factory.git"
   }
 }
